@@ -5,9 +5,46 @@
   max-height: 230px;
   max-width: -webkit-fill-available; }
 
+.card-header * {
+  overflow: unset !important; }
+
+.searchButton {
+  background-color: #ff0084;
+  border: #ff0084 solid 1px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #FFF !important;
+  padding: 10px; }
+
 .search-form {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   width: fit-content; }
+
+.textTruncate {
+  white-space: nowrap; }
+
+.searchInput {
+  border: #ff0084 1px solid;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  line-height: 0; }
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px; }
+
+.column card {
+  margin-top: 8px;
+  max-height: max-content !important;
+  vertical-align: middle;
+  width: 100%; }

@@ -1,4 +1,5 @@
 import React from 'react';
+import TextTruncate from 'react-text-truncate';
 
 class Photos extends React.Component{
 
@@ -25,16 +26,36 @@ class Photos extends React.Component{
           let title = `${photo.title}`;
 
           return (
-            <div class="col-sm-6 col-md-4 col-lg-4">
-              <div class="card mb-4">
-                <h7 class="card-header">
-                  <a href={source} key={id} taret="_blank" className="imageBox">
-                    {photo.title}
+            // <div class="col-sm-6 col-md-4 col-lg-4" className="imageBox">
+            //   <div class="card mb-4">
+            //     <h7 class="card-header">
+            //       <a href={source} key={id} taret="_blank">
+            //         {photo.title}
+            //       </a>
+            //     </h7>
+            //     <a href={source} key={id} target="_blank">
+            //       <img src={source} alt={title} className="photoImage"/>
+            //     </a>
+            //   </div>
+            // </div>
+            <div class="column">
+              <div class="card border-primary">
+                <div class="card-header">
+                  <a href={source} key={id} target="_blank">
+                    <TextTruncate
+                      className="textTruncate"
+                      line={1}
+                      truncateText=""
+                      text={photo.title}
+                      textTruncateChild={<a href="#">...</a>}
+                    />
                   </a>
-                </h7>
-                <a href={source} key={id} target="_blank" className="imageBox">
-                  <img src={source} alt={title} className="photoImage"/>
-                </a>
+                </div>
+                <div class="card-body">
+                  <a href={source} key={id} target="_blank" className="imageBox">
+                    <img src={source} alt={title} className="photoImage"/>
+                  </a>
+                </div>
               </div>
             </div>
           );
@@ -43,11 +64,14 @@ class Photos extends React.Component{
     } 
 
     return (
-      <div className="photoList">
-        <div class="row">
-          {photoNodes}
-        </div>
+      <div class="row">
+        {photoNodes}
       </div>
+      // <div className="photoList">
+      //   <div class="row">
+      //     {photoNodes}
+      //   </div>
+      // </div>
     );
   }
 };

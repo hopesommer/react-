@@ -33,7 +33,7 @@ class SearchBar extends React.Component{
           <button 
             type="submit" 
             ref="button"
-            className="searchButton">Search on Flickr</button>
+            className="searchButton"><i class="fas fa-search"></i></button>
         </form>
       </div>
     )
