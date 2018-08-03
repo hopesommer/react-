@@ -41,19 +41,13 @@ class Photos extends React.Component{
             <div class="column">
               <div class="card border-primary">
                 <div class="card-header">
-                  <a href={source} key={id} target="_blank">
-                    <TextTruncate
-                      className="textTruncate"
-                      line={1}
-                      truncateText=""
-                      text={photo.title}
-                      textTruncateChild={<a href="#">...</a>}
-                    />
-                  </a>
-                </div>
-                <div class="card-body">
                   <a href={source} key={id} target="_blank" className="imageBox">
                     <img src={source} alt={title} className="photoImage"/>
+                  </a>>
+                </div>
+                <div class="card-body">
+                  <a href={source} key={id} target="_blank">
+                    <p class="photo-title">{photo.title}</p>
                   </a>
                 </div>
               </div>

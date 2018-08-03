@@ -12,6 +12,10 @@
     }
 }
 
+.card-body {
+    padding-bottom: 0px;
+}
+
 .card-header {
     * {
         overflow: unset !important;
@@ -27,16 +31,17 @@
     padding: 10px;
 }
 
+.photo-title {
+    line-height: 1;
+    white-space: pre-wrap;
+}
+
 .search-form {
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     width: fit-content;
-}
-
-.textTruncate {
-    white-space: nowrap;
 }
 
 .searchInput {
