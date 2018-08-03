@@ -43,7 +43,7 @@ class Photos extends React.Component{
                 <div class="card-header">
                   <a href={source} key={id} target="_blank" className="imageBox">
                     <img src={source} alt={title} className="photoImage"/>
-                  </a>>
+                  </a>
                 </div>
                 <div class="card-body">
                   <a href={source} key={id} target="_blank">
